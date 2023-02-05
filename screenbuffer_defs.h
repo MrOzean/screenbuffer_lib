@@ -1,5 +1,5 @@
-#ifndef _GFXFONT_H_
-#define _GFXFONT_H_
+#ifndef _SCREEN_BUFFER_DEFS_H_
+#define _SCREEN_BUFFER_DEFS_H_
 
 #include <stdint.h>
 #include <stdbool.h>
