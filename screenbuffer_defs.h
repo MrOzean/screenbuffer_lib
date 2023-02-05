@@ -28,3 +28,4 @@ typedef struct
     uint16_t y;
 } screenbuffer_point;
 
+#endif
