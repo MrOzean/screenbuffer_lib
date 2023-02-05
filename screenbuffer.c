@@ -320,7 +320,7 @@ void screenbuffer_fill_rectangle(screenbuffer_dev *dev, uint16_t x1, uint16_t y1
         }
     }
 }
-void screenbuffer_draw_bitmap(screenbuffer_dev *dev, uint16_t x, uint16_t y, uint8_t *image_array)
+void screenbuffer_draw_bitmap(screenbuffer_dev *dev, uint16_t x, uint16_t y, uint8_t *bitmap, int16_t w, int16_t h, int32_t color)
 {
     int16_t byteWidth = (w + 7) / 8; // Bitmap scanline pad = whole byte
     uint8_t b = 0;
@@ -334,7 +334,7 @@ void screenbuffer_draw_bitmap(screenbuffer_dev *dev, uint16_t x, uint16_t y, uin
             else
                 b = pgm_read_byte(&bitmap[j * byteWidth + i / 8]);
             if (b & 0x80)
-                writePixel(x + i, y, color);
+                dev->draw_pixel_fptr(dev, x + i, y, color);
         }
     }
 }
