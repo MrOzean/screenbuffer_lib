@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "gfxfont.h"
 
 typedef struct screenbuffer_dev screenbuffer_dev;
 
